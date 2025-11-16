@@ -1,0 +1,106 @@
+/* === General Page Styling === */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+}
+
+/* === Header Section === */
+.header {
+  background: linear-gradient(90deg, #006d5b, #00b894);
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+  border-bottom: 4px solid gold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #f1f1f1;
+}
+
+/* === Section Styling === */
+section {
+  margin: 40px auto;
+  max-width: 900px;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+h2 {
+  color: gold;
+  text-align: center;
+  margin-bottom: 15px;
+  border-bottom: 2px solid gold;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+p, li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  padding-left: 15px;
+  position: relative;
+}
+
+li::before {
+  content: "•";
+  color: gold;
+  position: absolute;
+  left: 0;
+}
+
+/* === Contact Section === */
+.contact p {
+  text-align: center;
+  margin: 5px 0;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  background: #006d5b;
+  padding: 20px;
+  color: #fff;
+  border-top: 3px solid gold;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+/* === Responsive Styling === */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    margin: 20px;
+    padding: 20px;
+  }
+}
