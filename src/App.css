@@ -104,3 +104,240 @@ footer {
     padding: 20px;
   }
 }
+.profile-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.profile-pic {
+    width: 120px;               /* slightly smaller than 150px */
+    height: 120px;              /* keep it square for circular shape */
+    border-radius: 50%;         /* makes it circular */
+    object-fit: cover;          /* image covers the box without distortion */
+    border: 4px solid #00c897; /* jungle green border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* subtle shadow */
+    display: block;
+    margin: 0 auto;             /* center horizontally */
+    transition: transform 0.3s; /* optional smooth hover effect */
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);     /* optional: slightly enlarge on hover */
+}
+
+
+.profile-name {
+  margin-top: 15px;
+  font-size: 22px;
+  color: #f4d03f; /* gold */
+  font-weight: bold;
+}
+
+/* Ensure the image class used in `App.js` is circular and fits */
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #00c897;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 0 auto 12px;
+  transition: transform 0.25s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .profile-img {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-img {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* Tech stack badges */
+.tech-section .tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.tech-badge {
+  background: rgba(255,255,255,0.07);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  font-size: 0.95rem;
+}
+
+/* Projects grid */
+.projects-section .project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 16px;
+}
+
+.project-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.32);
+}
+
+.project-card h3 {
+  margin: 0 0 8px;
+  color: gold;
+}
+
+.project-card p {
+  color: #ddd;
+  font-size: 0.95rem;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #00d1b2;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* Header layout improvements */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 40px 24px;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro {
+  max-width: 640px;
+  text-align: left;
+}
+
+.intro .title {
+  font-size: 2.2rem;
+  margin: 0 0 6px;
+}
+
+.cta-row {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg,#00c897,#006d5b);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .header { flex-direction: column; text-align: center; }
+  .intro { text-align: center; }
+}
+
+/* Floating CV Download Button */
+.cv-floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    background: linear-gradient(135deg, #4CAF50, #2E7D32); /* Jungle green theme */
+    color: white;
+    padding: 14px 22px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    transition: all 0.3s ease-in-out;
+    z-index: 2000; 
+}
+
+/* Hover effect */
+.cv-floating-btn:hover {
+    transform: scale(1.07);
+    background: linear-gradient(135deg, #66BB6A, #388E3C);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
+}
+
+/* For mobile */
+@media (max-width: 600px) {
+    .cv-floating-btn {
+        bottom: 15px;
+        right: 15px;
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+}
+.cv-section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.cv-view-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #008cba;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: 0.3s ease;
+  font-weight: 600;
+}
+
+.cv-view-btn:hover {
+  background-color: #0072a1;
+  transform: translateY(-2px);
+}
+
+

@@ -1,5 +1,7 @@
 import React from "react";
 import "./App.css";
+import TechStack from "./components/TechStack";
+import Projects from "./components/Projects";
 
 function App() {
   const cvUrl = `${process.env.PUBLIC_URL || ""}/Grace_CV.pdf`;
@@ -9,7 +11,7 @@ function App() {
       {/* ---- HEADER ---- */}
       <header className="header">
         <img
-          src="/profile.png"
+          src="/profile.jpg"
           alt="Grace Ruguru Ndungu"
           className="profile-img"
         />
@@ -27,6 +29,12 @@ function App() {
           and working on innovative tech projects.
         </p>
       </section>
+
+      {/* Tech stack */}
+      <TechStack />
+
+      {/* Projects */}
+      <Projects />
 
       {/* ---- SKILLS ---- */}
       <section className="section">
@@ -80,7 +88,7 @@ function App() {
         <h2>Contact Me</h2>
         <p>Email: <strong>rugurugrace75@gmail.com</strong></p>
         <p>GitHub: <strong>github.com/grace-001dev</strong></p>
-        <p>Phone: <strong>0797 837 043</strong></p>
+        <p>Phone: <strong>0792 204 330</strong></p>
       </section>
 
  {/* ---- CV SECTION ---- */}
