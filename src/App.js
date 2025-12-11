@@ -2,6 +2,8 @@ import React from "react";
 import "./App.css";
 
 function App() {
+  const cvUrl = `${process.env.PUBLIC_URL || ""}/Grace_CV.pdf`;
+
   return (
     <div className="App">
       {/* ---- HEADER ---- */}
@@ -74,17 +76,44 @@ function App() {
       </section>
 
       {/* ---- CONTACT ---- */}
-      <section className="section">
+      <section className="section contact">
         <h2>Contact Me</h2>
         <p>Email: <strong>rugurugrace75@gmail.com</strong></p>
         <p>GitHub: <strong>github.com/grace-001dev</strong></p>
-        <p>Phone: <strong>0792204330</strong></p>
+        <p>Phone: <strong>0797 837 043</strong></p>
       </section>
+
+ {/* ---- CV SECTION ---- */}
+<section className="section cv-section">
+  <h2>My CV</h2>
+  <p>You can view my updated CV below:</p>
+
+  <a
+    href="/Grace_CV.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="cv-view-btn"
+  >
+    Open CV
+  </a>
+</section>
+
 
       {/* ---- FOOTER ---- */}
       <footer className="footer">
         <p>© 2025 Grace Ruguru Ndungu | All Rights Reserved</p>
       </footer>
+
+      {/* Floating CV Button */}
+      <a
+        href={cvUrl}
+      
+        className="cv-floating-btn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        CV
+      </a>
     </div>
   );
 }
